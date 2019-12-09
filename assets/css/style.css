@@ -1,0 +1,287 @@
+.clearfix:after{
+    content:"";
+    clear: both;
+    display: block;
+}
+html,body{
+    width:100%;
+    height:100%;
+}
+body{
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    color: #777777;
+    background-image:url(../images/background.png);
+    margin:0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper{
+    flex:1 0 auto;
+}
+
+/*-------------------Header------------------------------*/
+header{
+    background: #ffffff;
+    border-bottom: 1px solid #cccccc;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.header_content{
+    background: #ffffff;
+    margin:auto;
+    width:960px;
+    position: relative;
+    bottom:2px;
+}
+
+#myname{
+    font-family: 'Georgia', Times, 'Times New Roman', serif;
+    float: left;
+    background: #4aaaa5;
+    color: #ffffff;
+    font-size: 24px;
+    padding: 20px 50px 20px 50px;
+    position: absolute;
+    bottom:-1px;
+}
+
+nav {
+    float: right;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+nav a{
+    text-decoration-line: none;
+    display: inline-block;
+    padding:20px;
+    text-align: center;
+    width: 100px;
+}
+
+nav a:link{
+    color: #cccccc;
+}
+nav a:visited{
+    color: #cccccc;
+}
+nav a:hover{
+    background: #ffffff00;;
+    color: black;
+    font-weight: bold;
+}
+nav a:active{
+    color:black;
+}
+
+/*-------------------Main Content------------------------------*/
+.main{
+    border: #dddddd;
+    width:960px;
+    margin: 150px auto 30px auto;
+}
+
+.main section{
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    padding:20px 50px 20px 50px;
+    overflow: auto;
+}
+
+ h1{
+    font-family: 'Georgia', Times, 'Times New Roman', serif;
+    color: #4aaaa5;
+    border-bottom: 2px solid #cccccc;
+    padding-bottom:20px;
+}
+
+
+
+/*----------index.html-------*/
+#profile{
+    height: 200px;
+    width:auto;
+    float:left;
+    margin-right:20px;
+    margin-bottom:10px;
+}
+
+/*----------portfolio.html------*/
+#galery_block .galery{
+    float:left;
+    margin-right:30px;
+    margin-bottom:30px;
+    position: relative;
+}
+
+#galery_block .galery img{
+    width: 300px;
+}
+
+#galery_block .galery a{
+    display: block;
+    background: #4aaaa5;
+    width:300px;
+    font-size: 24px;
+    text-align: center;
+    color:#ffffff;
+    padding-top:10px;
+    padding-bottom:10px;
+    float:  left;
+    position: absolute;
+    bottom:10px;
+    text-decoration: none;
+}
+
+
+#galery_block .galery a:hover{
+    transition:1s;
+    background: black;
+}
+
+
+/*-----------contact.html------------*/
+#contact input{
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+#contact #submit_button{
+    background: #4aaaa5;
+    color: #ffffff;
+    width:100px;
+    border: 0px;;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+#contact #submit_button:hover{
+    transition:1s;
+    background: black;
+    cursor: pointer;
+}
+
+#contact #contact_message{
+    width:100%;
+    height: 200px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+
+/*-------------------Footer------------------------------*/
+footer{
+    background: #666666;
+    color:#cccccc;
+    text-align: center;
+    border-top: 8px solid #4aaaa5;
+    width:100%;
+    height:20px;
+    padding-top:40px;
+    padding-bottom:10px;
+    flex-shrink: 0;
+}
+
+
+/*---------------media query-------------------------*/
+
+@media screen and (max-width:980px){
+     /*----------------------------------------*/
+    .main, .header_content {
+        width:80%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    
+    .main{
+        margin-top:100px;
+    }
+
+    /*---------------header/navbar-------------------------*/
+    #myname{
+        font-size: 20px;
+        padding: 0.5em 1.5em;
+    }
+
+    nav a{
+        width: 80px;
+        padding:0.1em;
+    }
+
+    /*other content remain the same*/
+
+}
+
+
+@media screen and (max-width:768px){
+    /*header/navbar remain the same*/
+
+    /*-----resizing portfolio(image and link)--------*/
+    .galery{
+        width:40%;
+    }
+
+    #galery_block .galery img, #galery_block .galery a{
+        width: 100%;
+    }
+
+    #galery_block .galery a{
+        font-size: 20px;
+    }
+
+    /*other content remain the same*/
+}
+
+
+
+@media screen and (max-width:640px){
+    /*------change header/navbar-----------*/
+    header, .header_content{
+        width:100%;
+        position: static;
+    }
+    #myname, nav{
+        font-size:24px;
+        position:static;
+        float: none;
+        text-align: center;
+    }
+
+    nav a{
+        padding:20px;
+        width: 100px;
+    }
+
+
+    /*------change main content image----------*/
+    .main{
+        margin-top:50px;
+    }
+
+    #profile{
+        width:100%;
+        height:auto;
+        float:none;
+        margin:auto;
+    }
+
+    /*-----resizing portfolio(image and link)--------*/
+    .galery{
+        width:100%;
+    }
+
+    #galery_block .galery img, #galery_block .galery a{
+        width: 100%;
+    }
+
+    #galery_block .galery a{
+        font-size: 24px;
+    }
+
+}
+
