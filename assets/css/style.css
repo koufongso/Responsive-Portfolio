@@ -213,28 +213,25 @@ footer{
         padding:0.1em;
     }
 
+    /*-----resizing portfolio(image and link)--------*/
+    .galery{
+        width:40%;
+    }
+    
+     #galery_block .galery img, #galery_block .galery a{
+        width: 100%;
+     }
+    
+    #galery_block .galery a{
+        font-size: 20px;
+    }
     /*other content remain the same*/
 
 }
 
 
 @media screen and (max-width:768px){
-    /*header/navbar remain the same*/
-
-    /*-----resizing portfolio(image and link)--------*/
-    .galery{
-        width:40%;
-    }
-
-    #galery_block .galery img, #galery_block .galery a{
-        width: 100%;
-    }
-
-    #galery_block .galery a{
-        font-size: 20px;
-    }
-
-    /*other content remain the same*/
+    /*there is no difference comparing to 980px setting*/
 }
 
 
